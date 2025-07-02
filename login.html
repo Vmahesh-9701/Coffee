@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function login(event){
+            event.preventDefault();
+              alert("Login Succesfull!");
+              window.location.href="/home.html"
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(231, 221, 221);">
+    <div class="nav" style="background-color: rgb(54, 21, 21);">
+        <div class="logoSection">
+            <div class="logo">
+                <img src="images\Coff_-removebg-preview.png" alt="Error">
+            </div>
+            <div class="logoHead">
+                <h3>Coffee Cafe</h3>
+            </div>
+        </div>
+        <div class="cont1">
+            <div class="home"><a href="home.html">Home</a></div>
+            <div class="about"><a href="about.html">About</a></div>
+            <div class="menu"><a href="menu.html">Menu</a></div>
+            <div class="gallery"><a href="gallery.html">Gallery</a></div>
+            <div class="contact"><a href="contact.html">Contact</a></div>
+            <div class="Login"><a href="login.html">Login</a></div>
+        </div>
+    </div>
+    <form onsubmit="login(event)">
+        <div class="login-container">
+            <div class="login-heading">LOGIN</div>
+            <div class="login-email"><input type="email" placeholder="Email address..." required></div>
+            <div class="login-pass"><input type="password" placeholder="Password..." required></div>
+            <div class="reg">Didn't have an Account? then click here to <span><a href="registration.html">SignUp</a></span></div>
+            <div class="login-actions">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function contact(event) {
+            event.preventDefault(); 
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const txt = document.getElementById("text-msg").value.trim();
+            let isValid = true;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (name === "") {
+                alert("Please enter your name.");
+                isValid = false;
+            }
+            else if (!email.match(emailPattern)) {
+                alert("Enter a valid email address.");
+                isValid = false;
+            }
+            else if (txt === "") {
+                alert("Please enter your message.");
+                isValid = false;
+            }
+            else{
+                alert("Your response has been submitted.");
+                document.getElementById("name").value="";
+                document.getElementById("email").value="";
+                document.getElementById("text-msg").value="";
+            }
+        }
+        </script>
+        
+</head>
+
+<body style="background-color:rgb(241, 238, 230);">
+    <div class="nav" style="background-color: rgb(54, 21, 21);">
+        <div class="logoSection">
+            <div class="logo">
+                <img src="images\Coff_-removebg-preview.png" alt="Error">
+            </div>
+            <div class="logoHead">
+                <h3>Coffee Cafe</h3>
+            </div>
+        </div>
+        <div class="cont1">
+            <div class="home"><a href="home.html">Home</a></div>
+            <div class="about"><a href="about.html">About</a></div>
+            <div class="menu"><a href="menu.html">Menu</a></div>
+            <div class="gallery"><a href="gallery.html">Gallery</a></div>
+            <div class="contact"><a href="contact.html">Contact</a></div>
+            <div class="Login"><a href="login.html">Login</a></div>
+        </div>
+    </div>
+    <div class="cont-heading">Contact Us</div>
+    <div class="contact-page">
+        <div class="contact-cont">
+            <div class="cont"><img src="images\contact-images\location.png" alt="">
+                <div id="cont-loc-cont">SRKR Bhimavaram</div>
+            </div>
+            <div class="cont"><img src="images\contact-images\whatsapp.png" alt="">
+                <div id="cont-whatsapp-cont"> 99XXXXXX</div>
+            </div>
+            <div class="cont"><img src="images\contact-images\telephone.png" alt="">
+                <div id="cont-whatsapp-cont"> 99XXXXXX</div>
+            </div>
+            <div class="cont"><img src="images\contact-images\email.png" alt="">
+                <div id="cont-email-cont"> coffeecafe@gmail.com</div>
+            </div>
+        </div>
+        <div class="contact-form">
+    <form onsubmit="contact(event)">
+        <div class="form-cont">
+            <div class="cont-input-name">
+                <input type="text" placeholder="Your Name" id="name">
+            </div>
+            <div class="cont-input-email">
+                <input type="email" placeholder="Your Email address" id="email">
+            </div>
+            <div class="cont-msg">
+                <textarea name="message" id="text-msg" cols="30" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="cont-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+    </div>
+</body>
+
+</html>
